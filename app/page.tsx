@@ -254,7 +254,7 @@ export default function Home() {
     if (markdown.trim()) {
       const doc = generatePdfDocument(markdown);
       const url = doc.output("bloburl");
-      setPreviewUrl(url);
+      setPreviewUrl(url as unknown as string);
     } else {
       setPreviewUrl("");
     }
