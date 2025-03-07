@@ -195,7 +195,7 @@ const generatePdfDocument = (markdown: string): jsPDF => {
         doc.setTextColor(80, 80, 80);
 
         const codeLines = token.text.split("\n");
-        codeLines.forEach((codeLine) => {
+        codeLines.forEach((codeLine: string) => {
           const wrappedLines = wrapText(doc, codeLine, fontSize, maxWidth);
           wrappedLines.forEach((lineText) => {
             y = checkNewPage(doc, y, lineHeight, pdfConfig.margin);
