@@ -125,7 +125,6 @@ const generatePdfDocument = (markdown: string): jsPDF => {
   marked.setOptions({
     breaks: true,
     gfm: true,
-    headerIds: false,
     renderer,
   });
 
