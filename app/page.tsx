@@ -211,7 +211,7 @@ const generatePdfDocument = (markdown: string): jsPDF => {
         const fontSize = pdfConfig.fontSize.normal;
         const lineHeight = fontSize * pdfConfig.lineHeightMultiplier;
         
-        token.items.forEach((item) => {
+        token.items.forEach((item: any) => {
           const processedItem = processFormattedText(item.text);
           let isFirstLine = true;
 
